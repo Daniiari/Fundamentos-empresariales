@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pollo Campero El Salvador</title>
+  <style>
+    :root {
+      --color-primario: #f9a825;
+      --color-secundario: #ef6c00;
+      --color-texto: #333;
+      --color-fondo: #fff8e1;
+      --color-card: #fff3e0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--color-primario);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      max-width: 200px;
+    }
+
+    nav {
+      background-color: var(--color-secundario);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe0b2;
+    }
+
+    .hero {
+      background-image: url('imagenes/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--color-secundario);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .menu-grid,
+    .promociones-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-item,
+    .promo-item {
+      background-color: var(--color-card);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .menu-item:hover,
+    .promo-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-item img,
+    .promo-item img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 40px;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: var(--color-secundario);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        font-size: 1.5em;
+        height: 250px;
+        padding: 0 10px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="imagenes/logo.png" alt="Pollo Campero El Salvador" />
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#promociones">Promociones</a>
+    <a href="#ubicaciones">Ubicaciones</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="hero" id="inicio">
+    ¡Tierno, Jugoso y Crujiente!
+  </div>
+
+  <section id="menu">
+    <h2>Menú</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="imagenes/pollo-frito.jpeg" alt="Pollo Frito" />
+        <h3>Pollo Frito</h3>
+        <p>Marinado y empanizado a la perfección.</p>
+      </div>
+      <div class="menu-item">
+        <img src="imagenes/combos.jpeg" alt="Combos" />
+        <h3>Combos</h3>
+        <p>Combos deliciosos para compartir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="promociones">
+    <h2>Promociones</h2>
+    <p style="text-align: center;">¡Descubre nuestras ofertas especiales y disfruta del sabor Campero!</p>
+    <div class="promociones-grid">
+      <div class="promo-item">
+        <img src="imagenes/promocion1.png" alt="Promoción 1" />
+        <h3>Combo Familiar</h3>
+        <p>¡Pizza Gigante de 1 Ingrediente + 6 Piezas + 3 Flanes + Bebida Familiar!</p>
+      </div>
+      <div class="promo-item">
+        <img src="imagenes/Promocion2.png" alt="Promoción 2" />
+        <h3>Combo 10 Piezas</h3>
+        <p>¡10 piezas + 5 papas + 5 ensaladas + rolls + bebida familiar!</p>
+      </div>
+      <div class="promo-item">
+        <img src="imagenes/Promocion3.png" alt="Promoción 3" />
+        <h3>Combo Especial</h3>
+        <p>¡10 piezas + 5 papas + 5 panes + bebida + tres leches familiar!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ubicaciones">
+    <h2>Ubicaciones</h2>
+    <p style="text-align: center;">Encuentra tu restaurante Campero más cercano:</p>
+    <ul>
+      <li><strong>San Salvador Centro:</strong> Av. España #123</li>
+      <li><strong>Santa Tecla:</strong> Calle Chiltiupan #456</li>
+      <li><strong>Soyapango:</strong> Plaza Mundo</li>
+      <li><strong>Metrocentro:</strong> Local 25</li>
+      <li><strong>Usulután Centro:</strong> Frente a Alcaldía</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p style="text-align: center;">¿Tienes preguntas o comentarios? ¡Contáctanos!</p>
+    <ul>
+      <li><strong>Correo:</strong> servicioalcliente@campero.com</li>
+      <li><strong>WhatsApp:</strong> 2273-6000</li>
+      <li><strong>Teléfono:</strong> 2273-6000</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pollo Campero El Salvador. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
